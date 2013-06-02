@@ -1,0 +1,30 @@
+/*
+ * ArtisanChurch.com
+ * Grid System
+ */
+
+ @1col:   80;
+ @2col:  180;
+ @3col:  280;
+ @4col:  380;
+ @5col:  480;
+ @6col:  580;
+ @7col:  680;
+ @8col:  780;
+ @9col:  880;
+@10col:  980;
+@11col: 1080;
+@12col: 1180;
+
+.width (@cols) {
+	width: percentage(@@cols / 1200);
+}
+.block (@cols) {
+    width: percentage(@@cols / 1200);
+    margin: 0 percentage(10 / 1200) 1em;
+    float: left;
+}
+
+.offset (@cols) {
+	margin-left: percentage( (10 + @@cols) / 1200 )
+}

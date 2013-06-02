@@ -1,0 +1,273 @@
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 767px) {
+    
+    // Styles for custom drop-down menu on narrow viewports
+
+    .nav-primary {
+        .block('4col');
+        height: 2em;
+        padding-left: 5px;
+        margin-top: 0.625em;
+        position: relative;
+        //overflow: hidden;
+    }
+    .nav-primary a {
+        padding-right: 3em;
+    }
+    .nav-primary h1 {
+        display: block;
+        width: 100%;
+        padding: 0.375em 0.5em;
+        margin: 0;
+        // position: absolute;
+        // top: 0;
+        // left: auto;
+        // right: 0;
+        background: @primary;
+        color: @lightTan;
+        font-size: 1em;
+        cursor: pointer;
+        // width: 4em;
+        // height: 4.5em; 
+        // text-indent: -999em;
+    }
+    // .nav-primary.expanded h1:after {
+    //     background-position: -169px 45%;
+    // }
+    .nav-primary ul {
+        clear: left;
+        display: none;
+        //position: absolute;
+        //top: 2.75em;
+        //left: 0;
+        font-size: 0.875em;
+        background: @primaryAlt;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    }    
+    .nav-primary a {
+        padding: 0.5em 0.5em 0.25em;
+        background: transparent;
+        color: @lightTan;
+    }
+    .nav-primary.expanded ul,
+    .nav-primary li.nav-current,
+    .nav-primary:hover ul,
+    .nav-primary:active ul {
+        display: block; // list-item used for showing current page?
+    } 
+    // .nav-primary li.nav-current {
+    //     border-bottom-width: 0;
+    // }
+    // .nav-primary.expanded li.nav-current {
+    //     border-bottom-width: 1px;
+    // }
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+    .masthead {
+        .block('4col');
+        margin: 2em 0.833333% 1.5em;
+    }
+    .logo {
+        width: 400px;
+    }
+    nav {
+        
+    }
+    nav h1 {
+        .visuallyhidden;
+    }
+    header > .nav-primary {
+        .block('8col');
+        margin-top: 2.5em;
+        
+        ul {
+            float: right;
+        }
+        li {
+            display: inline-block;
+            margin-left: 0.25em;
+        }
+        a {
+            background: @primaryAlt;
+            color: @lightTan;
+            font-size: 0.9375em;
+        }
+        a:hover,
+        a:focus {
+            background: @primary;
+            color: #FFF;
+            transition: 0.25s all;
+            text-decoration: none;
+        }
+    }
+
+    header > .nav-secondary {
+        width: auto;
+        border: none;
+        margin: 0;
+        position: absolute;
+        top: 0.5em;
+        right: percentage(10 / 1200);
+        text-align: left;
+
+        li {
+            display: inline-block;
+            width: auto;
+            margin-left: 1.5em;
+        }
+        a {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .home-services {
+        .block('4col');
+        padding: 1em;
+        background: @lightGold;
+    }
+    .home-map {
+        display: block;
+        .block('4col');
+        padding: 1em;
+        background: @lightGold;
+    }
+    .home-mission {
+        .block('4col');
+        padding: 1em;
+        border: none;
+        background: @lightGold;
+    }
+
+    .features {
+        clear: both;
+    }
+    .feature-primary {
+        overflow: auto;
+
+        > a {
+            .block('8col');
+        }
+    }
+    .feature-primary-copy {
+        .block('4col');
+        font-size: 1.125em;
+    }
+
+    .feature-secondary {
+        .block('4col');
+        //font-size: 1.125em;
+
+        img {
+            width: auto;
+            max-width: 100%;
+            margin-left: 0;
+            float: none;
+        }
+
+        hgroup {
+            min-height: 0;
+        }
+    }
+
+    body > footer {
+        clear: both;
+    }
+
+    footer {
+        > .vcard {
+            .block('4col');
+        }
+        > .nav-primary {
+            .block('2col');
+        }
+        > .nav-primary li {
+
+        }
+        > .nav-secondary {
+            .block('2col');
+            border: none;
+        }
+        > .nav-secondary ul {
+
+        }
+        > .nav-secondary li {
+            float: none;
+
+            line-height: 1.538461538461538; // 20/13
+        }
+        > .nav-secondary a {
+            text-align: left;
+        }
+        a {
+            padding: 0;
+            margin: 0;
+        }
+        > .social {
+            .block('4col');
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    header > .nav-primary a {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    header > .nav-primary a {
+        font-size: 1.25em;
+    }
+    .feature-primary-copy {
+        font-size: 1.25em;
+    }
+    .feature-secondary {
+        font-size: 1.125em;
+    }
+    .enews-subscribe legend {
+        font-size: 0.875em;
+    }
+    .enews-subscribe label {
+        font-size: 0.8125em;
+    }
+    #submit {
+        font-size: 0.8125em;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    header > .nav-primary a {
+        font-size: 1.5em;
+    }
+    .feature-primary-copy {
+        font-size: 1.5em;
+    }
+    .feature-secondary {
+        font-size: 1.25em;
+    }
+
+    footer {
+        
+    }
+}
+
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+
+}

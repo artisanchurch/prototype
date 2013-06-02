@@ -1,0 +1,300 @@
+/*
+ * ArtisanChurch.com
+ * Master LESS Stylesheet
+ */
+
+@import 'normalize.css';
+
+@import 'h5bp-top.less';
+
+@import 'font-awesome/font-awesome.less';
+
+@import 'color.less';
+
+@import 'grid.less';
+
+/* ==========================================================================
+   Primary Styles (mobile-first)
+   ========================================================================== */
+
+// Paul Irish's Universal box-sizing rule (http://paulirish.com/2012/box-sizing-border-box-ftw/)
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Standard typography
+   ========================================================================== */
+
+a:link,
+a:visited {
+    color: @primary;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: @primaryAlt;
+    text-decoration: underline;
+}
+a:active {
+    color: @mediumGray;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    //font-family: "Adelle Basic", Cambria, Georgia, serif;
+    font-weight: bold;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+    background: fade(@lightTan, 25%);
+    color: @navy;
+    //font-family: "Adelle Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+header {
+    position: relative;
+    //overflow: auto;
+}
+.masthead {
+    .block('8col');
+    margin-top: 0.625em;
+}
+.logo {
+    width: 100%;
+}
+img {
+    max-width: 100%;
+}
+
+nav {
+    margin: 0.625em 0;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    padding: 0;
+    margin: 0;
+}
+nav a {
+    display: block;
+    padding: .25em .5em;
+    background: #FFF;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+
+
+header > .nav-secondary {
+    .block('12col');
+}
+.nav-secondary {
+    border: solid @gray;
+    border-width: 1px 0;
+
+    ul {
+        border-top: none;
+    }
+    li {
+        width: 25%;
+        float: left;
+        background: none;
+    }
+    a {
+        border: none;
+        background: transparent;
+        font-size: 0.8125em; /* 13px */
+        text-align: center;
+        text-transform: none;
+    }
+}
+
+.main {
+    clear: both;
+
+    p, li, dt, dd, th, td {
+        font-size: 0.9375em; /* 15px */
+    }
+}
+
+.home-services,
+.home-mission {
+    display: block;
+    margin: 0.625em 0;
+    color: @navy;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;    
+}
+.home-map {
+    display: none;
+}
+.home-services {
+    h1 {
+        margin: 0;
+        color: @mediumGray;
+        font-size: 1.5em;
+        letter-spacing: 0.03125em;
+        text-transform: uppercase;
+    }
+    h2 {
+        margin: 0;
+        color: @navy;
+        font-variant: small-caps;
+    }
+    h3 {
+        margin: 0.5em 0 0;
+        color: @mediumGray;
+        font-size: 0.875em;
+        line-height: 1;
+        font-style: italic;
+    }
+}
+
+.home-mission {
+    padding: 0.3125em 4%;
+    border: solid @gray;
+    border-width: 1px 0;
+    text-align: left;
+    
+    span {
+        margin-left: 0.25em;
+        line-height: 1.375;
+    }
+    span:nth-child(4) {
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+
+.feature-primary img {
+    margin-bottom: 0.5em;
+}
+//.feature-primary > a,
+/*.feature-secondary > a {
+    display: block;
+    padding: 10% 25%;
+    margin-bottom: 0.5em;
+    background: @gray;
+    color: #FFF;
+    font-size: 2em;
+    text-align: center;
+}*/
+.features h3 {
+    margin: 0;
+    font-size: 0.75em;
+    line-height: 1.5;
+    font-weight: normal;
+    letter-spacing: 0.083333em;
+    text-transform: uppercase;
+}
+.features h1 {
+    margin: 0 0 0.25em;
+    font-size: 1.5em;
+    line-height: 1.125;
+}
+.features h2 {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.25;
+    font-style: italic;
+    font-weight: normal;
+}
+.features p {
+    margin: 0.5em 0 0;
+}
+.features .read-more {
+    font-size: 0.875em;
+    margin-bottom: 0.5em;
+}
+
+.feature-secondary {
+    padding-top: 1.25em;
+    border-top: 1px solid @gray;
+    margin: 1em 0;
+}
+.feature-secondary img {
+    width: 50%;
+    margin: 0 0 0.5em 0.5em;
+    float: right;
+}
+.feature-secondary hgroup {
+    min-height: 85px;
+    margin-bottom: 0.5em;
+}
+.feature-secondary h3 {
+
+}
+.feature-secondary h1 {
+    margin: .15em 0 .2em;
+    font-size: 1.25em;
+    line-height: 1.1; /* 22px */
+}
+.feature-secondary h2 {
+    font-size: 0.875em;
+}
+.feature-secondary p {
+    font-size: 0.8125em;
+}
+
+body > footer {
+    padding-top: 1.25em;
+    border-top: 1px solid @gray;
+    margin: 1em 0;
+    clear: both;
+}
+.fn.org {
+    margin: 0;
+    font-size: 1.25em;
+    line-height: 1;
+}
+.social ul {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 1em;
+    list-style: none;
+    overflow: auto;
+}
+.social li {
+    margin: 0 2em 0 0;
+    float: left;
+    // font-size: 0.8125em;
+}
+.social a {
+    text-decoration: none;
+}
+.social [class^="icon-"] {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.enews-subscribe legend {
+    border-bottom: 1px solid @gray;
+    margin-bottom: 1em;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+.enews-subscribe label {
+    font-size: 0.8125em;
+}
+#email {
+    width: 50%;
+    margin-right: 0.375em;
+}
+#submit {
+    padding-top: 3px;
+    font-size: 0.75em;
+    line-height: 1;
+}
+
+
+@import 'helpers.less';
+
+@import 'media-queries.less';
+
+@import 'print.less';
