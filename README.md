@@ -11,9 +11,13 @@ Initial release of live wireframe.
 ## To Do
 
 [ ] Set up mobile toggle menu for realsies
+
 [ ] Check vertical metrics for Adelle Sans
+
 [ ] Server-side responsive images
+
 [ ] Make newsletter form functional
+
 [ ] Design
 
 
