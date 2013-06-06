@@ -3,7 +3,7 @@
 
 ## Release History
 
-### 0.1 _(June 2, 2013)_
+### 0.1.0 _(June 5, 2013)_
 
 Initial release of live wireframe.
 
