@@ -8,64 +8,67 @@
     
     // Styles for custom drop-down menu on narrow viewports
 
-    .nav-primary {
-        .block('4col');
-        height: 2em;
-        padding-left: 5px;
-        margin-top: 0.625em;
-        position: relative;
-        //overflow: hidden;
-    }
-    .nav-primary a {
-        padding-right: 3em;
-    }
-    .nav-primary h1 {
+    .menu-button {
         display: block;
-        width: 100%;
+        width: 25%;
+        height: 2em; 
         padding: 0.375em 0.5em;
         margin: 0;
-        // position: absolute;
-        // top: 0;
-        // left: auto;
-        // right: 0;
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
         background: @primary;
         color: @lightTan;
         font-size: 1em;
         cursor: pointer;
-        // width: 4em;
-        // height: 4.5em; 
-        // text-indent: -999em;
     }
-    // .nav-primary.expanded h1:after {
-    //     background-position: -169px 45%;
-    // }
-    .nav-primary ul {
-        clear: left;
-        display: none;
-        //position: absolute;
-        //top: 2.75em;
-        //left: 0;
-        font-size: 0.875em;
+    .header-nav {
+        max-height: 0;
+        margin: 0.625em -10px 1em;
+
+        position: relative;
+        clear: both;
+        overflow: hidden;
+
         background: @primaryAlt;
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
-    }    
-    .nav-primary a {
-        padding: 0.5em 0.5em 0.25em;
+        
+        font-size: 1em;
+        line-height: 1;
+        
+        -webkit-transition: all 0.2s ease-out;
+           -moz-transition: all 0.2s ease-out;
+                transition: all 0.2s ease-out;
+    }
+    // .nav-primary > li {
+    //     padding-right: 3em;
+    // }
+    .header-nav ul {
+        .block('6col');
+        margin-top: 0.75em;
+    }
+    .header-nav li {
+
+    }
+    .header-nav a {
+        padding: 0.75em 1.5em;
         background: transparent;
         color: @lightTan;
     }
-    .nav-primary.expanded ul,
-    .nav-primary li.nav-current,
-    .nav-primary:hover ul,
-    .nav-primary:active ul {
-        display: block; // list-item used for showing current page?
-    } 
-    // .nav-primary li.nav-current {
-    //     border-bottom-width: 0;
-    // }
-    // .nav-primary.expanded li.nav-current {
-    //     border-bottom-width: 1px;
-    // }
+
+    .nav-secondary {
+        font-size: 0.875em;
+        line-height: 1.333333333;
+    }
+
+    .menu-button:hover + .header-nav,
+    .menu-button:active + .header-nav,
+    .header-nav.is-active {
+        max-height: 20em;
+    }
+
 }
 
 @media only screen and (min-width: 480px) {
@@ -73,45 +76,47 @@
 }
 
 @media only screen and (min-width: 768px) {
+
     .masthead {
-        .block('4col');
+        .block('5col');
         margin: 2em 0.833333% 1.5em;
     }
     .logo {
-        width: 400px;
+        //width: 400px;
     }
     nav {
         
     }
-    nav h1 {
+    .menu-button {
         .visuallyhidden;
     }
-    header > .nav-primary {
-        .block('8col');
-        margin-top: 2.5em;
+    .header-nav {
+        .block('7col');
+        margin-top: 2.875em;
         
-        ul {
+        > .nav-primary {
             float: right;
-        }
-        li {
-            display: inline-block;
-            margin-left: 0.25em;
-        }
-        a {
-            background: @primaryAlt;
-            color: @lightTan;
-            font-size: 0.9375em;
-        }
-        a:hover,
-        a:focus {
-            background: @primary;
-            color: #FFF;
-            transition: 0.25s all;
-            text-decoration: none;
+
+            > li {
+                display: inline-block;
+                margin-left: -0.28em;
+                font-size: 1em;
+            }
+            > li > a {
+                background: @primaryAlt;
+                color: @lightTan;
+            }
+            > li > a:hover,
+            > li > a:focus {
+                background: @primary;
+                color: #FFF;
+                transition: 0.25s all;
+                text-decoration: none;
+            }
         }
     }
 
-    header > .nav-secondary {
+    .header-nav > .nav-secondary {
         width: auto;
         border: none;
         margin: 0;
@@ -120,12 +125,12 @@
         right: percentage(10 / 1200);
         text-align: left;
 
-        li {
+        > li {
             display: inline-block;
             width: auto;
             margin-left: 1.5em;
         }
-        a {
+        > li > a {
             padding: 0;
             margin: 0;
         }
@@ -220,13 +225,13 @@
 }
 
 @media only screen and (min-width: 800px) {
-    header > .nav-primary a {
-        font-size: 1em;
+    .header-nav > .nav-primary > li {
+        font-size: 1.125em;
     }
 }
 
 @media only screen and (min-width: 960px) {
-    header > .nav-primary a {
+    .header-nav > .nav-primary > li {
         font-size: 1.25em;
     }
     .feature-primary-copy {
@@ -248,7 +253,7 @@
 
 
 @media only screen and (min-width: 1200px) {
-    header > .nav-primary a {
+    .header-nav > .nav-primary > li {
         font-size: 1.5em;
     }
     .feature-primary-copy {

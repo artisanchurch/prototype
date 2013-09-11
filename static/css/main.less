@@ -65,6 +65,7 @@ header {
 }
 .logo {
     width: 100%;
+    max-width: 400px;
 }
 img {
     max-width: 100%;
@@ -86,34 +87,34 @@ nav a {
     padding: 0.25em 0.5em 0.375em;
     background: #FFF;
     font-size: 1em;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 
 
 
-header > .nav-secondary {
-    .block('12col');
-}
-.nav-secondary {
-    border: solid @gray;
-    border-width: 1px 0;
+// .header-nav > .nav-secondary {
+//     .block('12col');
+// }
+// .nav-secondary {
+//     border: solid @gray;
+//     border-width: 1px 0;
 
-    ul {
-        border-top: none;
-    }
-    li {
-        width: 25%;
-        float: left;
-        background: none;
-    }
-    a {
-        border: none;
-        background: transparent;
-        font-size: 0.8125em; /* 13px */
-        text-align: center;
-        text-transform: none;
-    }
-}
+//     ul {
+//         border-top: none;
+//     }
+//     li {
+//         width: 25%;
+//         float: left;
+//         background: none;
+//     }
+//     a {
+//         border: none;
+//         background: transparent;
+//         font-size: 0.8125em; /* 13px */
+//         text-align: center;
+//         text-transform: none;
+//     }
+// }
 
 .main {
     clear: both;
@@ -161,11 +162,11 @@ header > .nav-secondary {
     padding: 0.3125em 4%;
     border: solid @gray;
     border-width: 1px 0;
+    line-height: 1.5;
     text-align: left;
     
     span {
-        margin-right: 0.25em;
-        line-height: 1.5;
+
     }
     span:nth-child(4) {
         font-style: italic;

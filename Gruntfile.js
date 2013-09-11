@@ -164,6 +164,7 @@ module.exports = function(grunt) {
   /**
    * The 'default' task will run whenever `grunt` is run without specifying a task
    */
-  grunt.registerTask('default', ['test', 'recess', 'uglify']);
+  //grunt.registerTask('default', ['test', 'recess', 'uglify']);
+  grunt.registerTask('default', ['recess', 'uglify']);
 
 };
