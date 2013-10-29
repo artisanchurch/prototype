@@ -40,3 +40,7 @@ Thumbs.db
 # Grunt.js #
 ############
 node_modules/
+
+# Other #
+#########
+sftp-config.json
