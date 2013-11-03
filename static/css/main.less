@@ -20,7 +20,7 @@
 // Paul Irish's Universal box-sizing rule (http://paulirish.com/2012/box-sizing-border-box-ftw/)
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* Standard typography
+/* Base styles
    ========================================================================== */
 
 a:link,
@@ -37,9 +37,16 @@ a:active {
     color: @mediumGray;
     text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6 {
-    //font-family: "Adelle Basic", Cambria, Georgia, serif;
+h1, h2, h3, h4, h5, h6,
+.section-id {
+    font-family: "Adelle Basic", Cambria, Georgia, serif;
     font-weight: bold;
+}
+blockquote {
+    padding: 1em 2em;
+    margin-left: 0;
+    margin-right: 0;
+    background: #FFF;
 }
 
 html {
@@ -50,18 +57,22 @@ body {
     max-width: 1200px;
     padding: 0 10px;
     margin: 0 auto;
-    background: fade(@lightTan, 25%);
+    background: fade(@warmTan, 5%);
     color: @navy;
-    //font-family: "Adelle Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Adelle Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-header {
+/* Header
+   ========================================================================== */
+
+body > header {
     position: relative;
-    //overflow: auto;
+    overflow: auto;
 }
 .masthead {
     .block('8col');
     margin-top: 0.625em;
+    margin-bottom: 0.5em;
 }
 .logo {
     width: 100%;
@@ -85,12 +96,10 @@ nav li {
 nav a {
     display: block;
     padding: 0.25em 0.5em 0.375em;
-    background: #FFF;
+    //background: #FFF;
     font-size: 1em;
     //text-transform: uppercase;
 }
-
-
 
 // .header-nav > .nav-secondary {
 //     .block('12col');
@@ -118,11 +127,17 @@ nav a {
 
 .main {
     clear: both;
+    overflow: auto;
 
     p, li, dt, dd, th, td {
         font-size: 0.9375em; /* 15px */
+        line-height: unit(22 / 15);
     }
 }
+
+
+/* Homepage layout
+   ========================================================================== */
 
 .home-services,
 .home-mission {
@@ -189,6 +204,7 @@ nav a {
 }*/
 .features h3 {
     margin: 0;
+    font-family: "Adelle Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 0.75em;
     line-height: 1.5;
     font-weight: normal;
@@ -209,6 +225,7 @@ nav a {
 }
 .features p {
     margin: 0.5em 0 0;
+    line-height: unit(20 / 15);
 }
 .features .read-more {
     font-size: 0.875em;
@@ -244,6 +261,37 @@ nav a {
     font-size: 0.8125em;
 }
 
+
+/* Normal page layout
+   ========================================================================== */
+
+.section-id {
+    color: @warmTan;
+    font-size: 1.25em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.nav-inside {
+    margin-bottom: 2em;
+}
+.nav-inside a {
+    padding: 0.5em 1em;
+    margin-bottom: 1px;
+    background: lighten(@warmTan, 40%);
+    font-size: 1.125em;
+    line-height: 1;
+    text-align: center;
+}
+.content h1 {
+    margin-top: 0;
+    line-height: 1;
+}
+
+
+
+/* Footer
+   ========================================================================== */
+
 body > footer {
     padding-top: 1.25em;
     border-top: 1px solid @gray;
@@ -252,8 +300,13 @@ body > footer {
 }
 .fn.org {
     margin: 0;
-    font-size: 1.25em;
-    line-height: 1;
+    font-size: 1.25em; // 20
+    line-height: unit(22 / 20);
+}
+.adr,
+.email {
+    font-size: 0.9375em; // 15
+    line-height: unit(22 / 15);
 }
 .social ul {
     width: 100%;
@@ -263,7 +316,7 @@ body > footer {
     overflow: auto;
 }
 .social li {
-    margin: 0 2em 0 0;
+    margin: 0 1.25em 0 0;
     float: left;
     // font-size: 0.8125em;
 }
@@ -272,6 +325,7 @@ body > footer {
 }
 .social [class^="icon-"] {
     margin-right: 4px;
+    line-height: 1;
     vertical-align: middle;
 }
 .enews-subscribe legend {

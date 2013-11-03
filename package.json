@@ -1,7 +1,7 @@
 {
   "name": "artisan-prototype",
   "description": "Front-end prototype for v3 of ArtisanChurch.com",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "homepage": "http://www.artisanchurch.com/v3",
   "author": {
     "name": "Scott Cranfill",
@@ -17,8 +17,8 @@
   },
   "licenses": [
     {
-      "type": "Apache",
-      "url": "http://www.artisanchurch.com/v3/blob/master/LICENSE-Apache"
+      "type": "MIT",
+      "url": "http://www.artisanchurch.com/v3/blob/master/LICENSE"
     }
   ],
   "engines": {
@@ -28,13 +28,12 @@
     "test": "grunt jasmine"
   },
   "dependencies": {
-    "grunt-contrib-uglify": "~0.2.0",
+    "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.3.0",
-    "grunt-contrib-jasmine": "~0.3.3",
-    "grunt-recess": "~0.3.1",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "~0.2.0",
     "grunt-contrib-watch": "~0.3.1",
-    "grunt-notify": "~0.1.4",
-    "grunt": "~0.4.1"
+    "grunt-notify": "~0.1.4"
   },
   "devDependencies": {
     "grunt": "~0.4.1"

@@ -3,13 +3,17 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Scott Austin -- Content -- @sjaustin
+    Dave Brajcki -- Design
+    Scott Cranfill -- Development & Design -- @scott_ish
+    Brian D'Angelo -- Design -- @btdangelo
+    Kristina Schanz -- Design -- @kschanz
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    HTML5, CSS3 (LESS)
+    HTML5 Boilerplate
+    Normalize, Font Awesome,
+    jQuery, Modernizr, Holder.js
+    Typekit
+    Grunt
