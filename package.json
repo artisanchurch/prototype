@@ -1,7 +1,7 @@
 {
   "name": "artisan-prototype",
   "description": "Front-end prototype for v3 of ArtisanChurch.com",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "http://www.artisanchurch.com/v3",
   "author": {
     "name": "Scott Cranfill",
