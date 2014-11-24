@@ -43,13 +43,13 @@ module.exports = function(grunt) {
       ' */\n\n',
 
     /**
-     * Recess: https://github.com/sindresorhus/grunt-recess
+     * Less: https://github.com/gruntjs/grunt-contrib-less
      * 
-     * Compile, concat and compress LESS files.
+     * Compile, concat and compress Less files.
      * Make sure to add any other CSS libraries/files you'll be using.
      * We are excluding minified files with the final ! pattern.
      */
-    recess: {
+    less: {
       dist: {
         src: ['<%= banner %>', 'static/css/main.less', '!static/css/*.min.css'],
         dest: 'static/css/main.min.css',
@@ -114,25 +114,6 @@ module.exports = function(grunt) {
     },
 
     /**
-     * Jasmine: https://github.com/gruntjs/grunt-contrib-jasmine
-     * 
-     * Run jasmine specs headlessly through PhantomJS.
-     * jQuery and Jasmine jQuery is included for your pleasure: https://github.com/velesin/jasmine-jquery
-     */
-    jasmine: {
-      src: '<%= uglify.dist.src %>',
-      options: {
-        specs: 'specs/js/*.js',
-        vendor: [
-          'specs/js/vendor/*.js'
-        ],
-        helpers: [
-          'specs/js/helpers/*.js'
-        ]
-      }
-    },
-
-    /**
      * Watch: https://github.com/gruntjs/grunt-contrib-watch
      * 
      * Run predefined tasks whenever watched file patterns are added, changed or deleted.
@@ -140,31 +121,23 @@ module.exports = function(grunt) {
      */
     watch: {
       gruntfile: {
-        files: ['Gruntfile.js', '<%= recess.dist.src %>', '<%= uglify.dist.src %>', '<%= jasmine.options.specs %>'],
+        files: ['Gruntfile.js', '<%= less.dist.src %>', '<%= uglify.dist.src %>'],
         tasks: ['default']
       }
     }
   });
 
   /**
-   * The above tasks are loaded here.
+   * Loading tasks
    */
-  grunt.loadNpmTasks('grunt-recess');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-notify');
 
   /**
-   * Create task aliases by registering new tasks
+   * Task aliases
    */
-  grunt.registerTask('test', ['jshint', 'jasmine']);
-
-  /**
-   * The 'default' task will run whenever `grunt` is run without specifying a task
-   */
-  //grunt.registerTask('default', ['test', 'recess', 'uglify']);
-  grunt.registerTask('default', ['recess', 'uglify']);
+  grunt.registerTask('default', ['less', 'jshint', 'uglify']);
 
 };

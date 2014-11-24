@@ -101,15 +101,15 @@
 
 @media only screen and (min-width: 768px) {
 
-    body {
-        padding: 0;
-    }
+    // body {
+    //     padding: 0;
+    // }
 
     // Header
 
     .masthead {
         .block('5col');
-        margin: 2em 0.833333% 1.5em;
+        margin: 1.5em 0.833333% 1.5em;
     }
     .logo {
         //width: 400px;
@@ -122,10 +122,12 @@
     }
     .header-nav {
         .block('7col');
-        margin-top: 2.875em;
+        margin-top: 3.25em;
         
         > .nav-primary {
             float: right;
+            position: relative;
+            right: -0.75em;
 
             > li {
                 display: inline-block;
@@ -133,15 +135,15 @@
                 font-size: 1em;
             }
             > li > a {
-                background: @primaryAlt;
-                color: lighten(@warmTan, 40%);
+                // background: @primaryAlt;
+                // color: lighten(@warmTan, 40%);
             }
             > li > a:hover,
             > li > a:focus {
-                background: @primary;
-                color: #FFF;
+                // background: @primary;
+                // color: #FFF;
                 transition: 0.25s all;
-                text-decoration: none;
+                // text-decoration: none;
             }
         }
     }
@@ -170,22 +172,21 @@
 
     // Homepage
 
-    .home-services {
+    .home-kickers > a {
         .block('4col');
+        display: block;
+        height: 8em;
         padding: 1em;
         background: lighten(@warmTan, 40%);
+    }
+    .home-services {
+       
     }
     .home-map {
-        display: block;
-        .block('4col');
-        padding: 1em;
-        background: lighten(@warmTan, 40%);
+        
     }
     .home-mission {
-        .block('4col');
-        padding: 1em;
-        border: none;
-        background: lighten(@warmTan, 40%);
+        
     }
 
     .features {

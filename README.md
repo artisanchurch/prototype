@@ -34,4 +34,4 @@ Contact Scott Cranfill at [scott.cranfill@artisanchurch.com](mailto:scott.cranfi
 
 ## License
 
-Public Domain
+[MIT](LICENSE)
