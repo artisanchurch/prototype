@@ -13,7 +13,7 @@ module.exports = function(grunt) {
      * Here's a banner with some template variables.
      * We'll be inserting it at the top of minified assets.
      */
-    banner: 
+    banner:
       '/*\n' +
       ' *            /|\n' +
       ' *           / |  |\\\n' +
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 
     /**
      * Less: https://github.com/gruntjs/grunt-contrib-less
-     * 
+     *
      * Compile, concat and compress Less files.
      * Make sure to add any other CSS libraries/files you'll be using.
      * We are excluding minified files with the final ! pattern.
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 
     /**
      * Uglify: https://github.com/gruntjs/grunt-contrib-uglify
-     * 
+     *
      * Minify JS files.
      * Make sure to add any other JS libraries/files you'll be using.
      * We are excluding minified files with the final ! pattern.
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
 
     /**
      * JSHint: https://github.com/gruntjs/grunt-contrib-jshint
-     * 
+     *
      * Validate files with JSHint.
      * Below are options that conform to idiomatic.js standards.
      * Feel free to add/remove your favorites: http://www.jshint.com/docs/#options
@@ -115,14 +115,25 @@ module.exports = function(grunt) {
 
     /**
      * Watch: https://github.com/gruntjs/grunt-contrib-watch
-     * 
+     *
      * Run predefined tasks whenever watched file patterns are added, changed or deleted.
      * Add files to monitor below.
      */
     watch: {
+      options: {
+        livereload: true
+      },
       gruntfile: {
-        files: ['Gruntfile.js', '<%= less.dist.src %>', '<%= uglify.dist.src %>'],
+        files: ['Gruntfile.js'],
         tasks: ['default']
+      },
+      less: {
+        files: ['**/*.html', 'static/css/*.less'],
+        tasks: ['less']
+      },
+      js: {
+        files: ['static/js/*.js', '!static/js/*.min.js'],
+        tasks: ['jshint', 'uglify']
       }
     }
   });
