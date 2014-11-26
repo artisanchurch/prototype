@@ -1,18 +1,18 @@
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries for Responsive Design.
+   Theses override the primary ('mobile first') styles.
    ========================================================================== */
 
 @media only screen and (max-width: 767px) {
-    
+
     // Styles for custom drop-down menu on narrow viewports
 
     .menu-button {
         display: block;
         width: 26%;
-        height: 2em; 
-        padding: 0.375em 0.5em;
+        height: 2em;
+        padding: 0.3125em 0.5em 0.375em;
+        border-radius: 4px;
         margin: 0;
 
         position: absolute;
@@ -22,19 +22,23 @@
         background: @primaryAlt;
         color: lighten(@warmTan, 40%);
         font-size: 1em;
+        font-weight: normal;
+        text-align: center;
+
         cursor: pointer;
+        transition: 0.25s all;
 
         &:hover,
         &:focus {
             background: @primary;
             color: #FFF;
-            transition: 0.25s all;
         }
     }
     .header-nav,
     .footer-nav {
         max-height: 0;
-        margin: 0.5em -10px;
+        padding: 0 0.75em;
+        margin: 0 -10px;
 
         position: relative;
         clear: both;
@@ -42,16 +46,18 @@
 
         background: @primaryAlt;
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
-        
+
         font-size: 1em;
         line-height: 1;
-        
+
         -webkit-transition: all 0.3s ease-out;
            -moz-transition: all 0.3s ease-out;
                 transition: all 0.3s ease-out;
     }
     .footer-nav {
         max-height: none;
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
     }
     // .nav-primary > li {
     //     padding-right: 3em;
@@ -67,7 +73,7 @@
     }
     .header-nav a,
     .footer-nav a {
-        padding: 0.75em 1.5em;
+        padding: 0.75em 1em;
         background: transparent;
         color: lighten(@warmTan, 40%);
 
@@ -115,24 +121,24 @@
         //width: 400px;
     }
     nav {
-        
+
     }
     .menu-button {
         .visuallyhidden;
     }
     .header-nav {
         .block('7col');
-        margin-top: 3.25em;
-        
+        margin-top: 2.625em;
+
         > .nav-primary {
             float: right;
             position: relative;
-            right: -0.75em;
+            right: -0.5em;
+            font-size: 1em;
 
             > li {
                 display: inline-block;
-                margin-left: -0.28em;
-                font-size: 1em;
+                margin-left: -0.25em;
             }
             > li > a {
                 // background: @primaryAlt;
@@ -140,10 +146,9 @@
             }
             > li > a:hover,
             > li > a:focus {
-                // background: @primary;
-                // color: #FFF;
-                transition: 0.25s all;
-                // text-decoration: none;
+                background: fade(@warmTan, 20%);
+                color: @primaryAlt;
+                text-decoration: none;
             }
         }
     }
@@ -153,60 +158,106 @@
         border: none;
         margin: 0;
         position: absolute;
-        top: 0.75em;
-        right: percentage(10 / 1200);
+        top: 0.25em;
+        right: percentage(11 / 1200);
         text-align: left;
 
         > li {
             display: inline-block;
             width: auto;
-            margin-left: 1.25em;
-            font-size: 0.9375em;
+            margin-left: 1em;
+            font-size: 0.875em;
         }
         > li > a {
             padding: 0;
             margin: 0;
+
+            &:link,
+            &:visited {
+                color: @mediumGray;
+            }
+
+            &:hover,
+            &:active {
+                color: @navy;
+            }
         }
     }
 
 
     // Homepage
 
-    .home-kickers > a {
+    .home-kickers {
+        margin-bottom: 1.25em;
+        overflow: hidden;
+    }
+    .home-kicker {
         .block('4col');
-        display: block;
-        height: 8em;
-        padding: 1em;
-        background: lighten(@warmTan, 40%);
-    }
-    .home-services {
-       
-    }
-    .home-map {
-        
+        padding: 0.75em 0.9375em;
+        padding-bottom: 1011px;
+        border: none;
+        margin-bottom: -999px;
     }
     .home-mission {
-        
+        font-size: 1.0625em;
+        text-align: left;
+    }
+    .home-map {
+        display: block;
+        // margin-left: 33.3%;
+    }
+    .home-services {
+        // margin-left: 66.6%;
+        h1 {
+            font-size: 1.125em;
+        }
+        h2 {
+            font-size: 1.125em;
+        }
     }
 
     .features {
         clear: both;
     }
+
     .feature-primary {
-        overflow: auto;
+        padding-top: 1.25em;
+        padding-right: 10px;
+        padding-left: 10px;
+        .clearfix();
+        margin-right: -10px;
+        margin-bottom: 1.25em;
+        margin-left: -10px;
+
+        background: @navy;
+        color: #FFF;
 
         > a {
             .block('8col');
         }
+
+        h3 {
+            color: @gray;
+        }
+        h1 {
+            color: lighten(@warmTan, 20%);
+        }
+        p {
+            color: lighten(@gray, 25%);
+        }
+        .read-more {
+            color: @warmTan;
+        }
     }
     .feature-primary-copy {
         .block('4col');
-        font-size: 1.125em;
     }
 
+    .features-secondary {
+        .clearfix();
+    }
     .feature-secondary {
         .block('4col');
-        //font-size: 1.125em;
 
         img {
             width: auto;
@@ -218,18 +269,20 @@
         hgroup {
             min-height: 0;
         }
+
+
     }
 
 
     // Normal page
 
     .main.inside {
-        margin-top: 1.5em;
+        // margin-top: 1.5em;
     }
     .sidebar {
-        .block('3col');
+        .block('4col');
         position: relative;
-        right: percentage((20 + @9col) / 1200);
+        right: percentage((20 + @8col) / 1200);
     }
     .section-id {
         line-height: unit(32 / 20); // to match line-height of h1 in neighboring column
@@ -241,9 +294,8 @@
     }
     .content {
         .block('8col');
-        .offset('1col');
         position: relative;
-        left: percentage((20 + @3col) / 1200);
+        left: percentage((20 + @4col) / 1200);
     }
 
 
@@ -255,7 +307,7 @@
 
     footer {
         > .vcard {
-            .block('4col'); 
+            .block('4col');
         }
         .fn.org {
             line-height: unit(22 / 20);
@@ -299,25 +351,51 @@
 }
 
 @media only screen and (min-width: 800px) {
-    .header-nav > .nav-primary > li {
+    .header-nav > .nav-primary {
         font-size: 1.125em;
     }
 }
 
 @media only screen and (min-width: 960px) {
-    .header-nav > .nav-primary > li {
+    .header-nav > .nav-primary {
         font-size: 1.25em;
     }
     .header-nav > .nav-secondary > li {
         margin-left: 1.5em;
         font-size: 1em;
     }
+
+    .home-mission {
+        font-size: 1.3125em;
+    }
+    .home-services {
+        h1,
+        h2 {
+            font-size: 1.25em;
+            line-height: unit(30 / 20);
+        }
+        h3 {
+            font-size: 1em;
+            line-height: unit(24/ 16);
+        }
+    }
+
     .feature-primary-copy {
-        font-size: 1.25em;
+        font-size: 1.125em;
     }
     .feature-secondary {
         font-size: 1.125em;
     }
+
+    .sidebar {
+        .block('3col');
+        right: percentage((20 + @9col) / 1200);
+    }
+    .content {
+        .offset('1col');
+        left: percentage((20 + @3col) / 1200);
+    }
+
     .enews-subscribe legend {
         font-size: 0.875em;
     }
@@ -334,18 +412,26 @@
 
 
 @media only screen and (min-width: 1200px) {
-    .header-nav > .nav-primary > li {
+    .header-nav > .nav-primary {
         font-size: 1.5em;
     }
+
+    .home-mission {
+        font-size: 1.625em;
+    }
+    .home-services {
+        font-size: 1.25em;
+    }
+
     .feature-primary-copy {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
     .feature-secondary {
         font-size: 1.25em;
     }
 
     footer {
-        
+
     }
 }
 

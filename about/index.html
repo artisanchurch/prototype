@@ -18,10 +18,10 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- Style -->
-    <link rel="stylesheet" href="static/css/main.min.css" />
+    <link rel="stylesheet" href="/static/css/main.min.css" />
 
     <!-- Script -->
-    <script src="static/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 
 <body>
@@ -32,22 +32,22 @@
 
         <section class="masthead">
             <a href="/" title="Return to homepage">
-                <!--[if lte IE 8]><img class="logo" src="static/img/logo_h_300x61_transparent.png" alt="Artisan Church" /><![endif]-->
-                <!--[if gt IE 8]><!--><img class="logo" src="static/img/logo.svg" alt="Artisan Church" /><!--<![endif]-->
+                <!--[if lte IE 8]><img class="logo" src="/static/img/logo_h_300x61_transparent.png" alt="Artisan Church" /><![endif]-->
+                <!--[if gt IE 8]><!--><img class="logo" src="/static/img/logo.svg" alt="Artisan Church" /><!--<![endif]-->
             </a>
         </section>
 
         <h1 class="menu-button" id="menu-button"><i class="icon-reorder"></i> Menu</h1>
-        
+
         <nav class="header-nav" id="header-nav" role="navigation">
             <ul class="nav-primary">
-                <li class="p1"><a href="/about">About Us</a></li>
+                <li class="p1 current"><a href="/about">About Us</a></li>
                 <li class="p2"><a href="/worship">Worship</a></li>
                 <li class="p4"><a href="/children">Children</a></li>
                 <li class="p3"><a href="/groups">Groups</a></li>
                 <li class="p5"><a href="/events">Events</a></li>
             </ul>
-       
+
             <ul class="nav-secondary">
                 <li class="s1"><a href="/directions">Directions</a></li>
                 <li class="s2"><a href="/podcast">Podcast</a></li>
@@ -58,7 +58,7 @@
 
     </header>
 
-    <section class="main inside">
+    <main class="main inside" id="main" role="main">
 
         <section class="content">
 
@@ -97,20 +97,19 @@
 
         <aside class="sidebar">
 
-            <div class="section-id">Section <i class="icon-chevron-right"></i></div>
+            <div class="section-id">About Us <i class="icon-chevron-right"></i></div>
 
             <nav class="nav-inside">
                 <ul>
-                    <li class="i1"><a href="#">Page 1</a></li>
-                    <li class="i2"><a href="#">Subsection pg 2</a></li>
-                    <li class="i3"><a href="#">Longer titled page 3</a></li>
-                    <li class="i4"><a href="#">Page 4</a></li>
-                    <li class="i5"><a href="#">Page 5</a></li>
+                    <li class="i1 current"><a href="#">Mission and Values</a></li>
+                    <li class="i2"><a href="#">Staff</a></li>
+                    <li class="i3"><a href="#">Name</a></li>
+                    <li class="i4"><a href="#">Ministries</a></li>
                 </ul>
             </nav>
 
             <section class="sidebar-content">
-                <h2>Sidebar content header</h2>
+                <h1>Sidebar content header</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -121,7 +120,7 @@
 
         </aside>
 
-    </section>
+    </main>
 
     <footer>
 
@@ -138,11 +137,11 @@
             <ul class="nav-primary">
                 <li class="p1"><a href="/about">About Us</a></li>
                 <li class="p2"><a href="/worship">Worship</a></li>
-                <li class="p3"><a href="/ministries">Ministries</a></li>
                 <li class="p4"><a href="/children">Children</a></li>
+                <li class="p3"><a href="/groups">Groups</a></li>
                 <li class="p5"><a href="/events">Events</a></li>
             </ul>
-       
+
             <ul class="nav-secondary">
                 <li class="s1"><a href="/directions">Directions</a></li>
                 <li class="s2"><a href="/podcast">Podcast</a></li>
@@ -167,12 +166,12 @@
                 </fieldset>
             </form>
         </section>
-        
+
     </footer>
 
 
     <!-- Scripts -->
-    <script src="static/js/main.min.js"></script>
+    <script src="/static/js/main.min.js"></script>
 
     <!-- Google Analytics -->
     <script>
