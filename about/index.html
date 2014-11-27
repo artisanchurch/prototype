@@ -1,3 +1,4 @@
+<!-- include: page-top - TO DO: Figure out how to set title on each page. -->
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -25,7 +26,9 @@
 </head>
 
 <body>
+<!-- /include: page-top -->
 
+    <!-- include: header -->
     <a href="#main" class="skip">Skip to content</a>
 
     <header>
@@ -40,6 +43,7 @@
         <h1 class="menu-button" id="menu-button"><i class="icon-reorder"></i> Menu</h1>
 
         <nav class="header-nav" id="header-nav" role="navigation">
+            <!-- include: navigation -->
             <ul class="nav-primary">
                 <li class="p1 current"><a href="/about">About Us</a></li>
                 <li class="p2"><a href="/worship">Worship</a></li>
@@ -54,9 +58,11 @@
                 <li class="s3"><a href="/giving">Giving</a></li>
                 <li class="s4"><a href="/contact">Contact</a></li>
             </ul>
+            <!-- /include: navigation -->
         </nav>
 
     </header>
+    <!-- /include: header -->
 
     <main class="main inside" id="main" role="main">
 
@@ -95,6 +101,7 @@
 
         </section>
 
+        <!-- include: section-sidebar -->
         <aside class="sidebar">
 
             <div class="section-id">About Us <i class="icon-chevron-right"></i></div>
@@ -119,9 +126,11 @@
             </section>
 
         </aside>
+        <!-- /include: section-sidebar -->
 
     </main>
 
+    <!-- include: footer -->
     <footer>
 
         <section class="vcard">
@@ -134,6 +143,7 @@
         </section>
 
         <nav class="footer-nav" id="footer-nav" role="navigation">
+            <!-- include: navigation -->
             <ul class="nav-primary">
                 <li class="p1"><a href="/about">About Us</a></li>
                 <li class="p2"><a href="/worship">Worship</a></li>
@@ -148,6 +158,7 @@
                 <li class="s3"><a href="/giving">Giving</a></li>
                 <li class="s4"><a href="/contact">Contact</a></li>
             </ul>
+            <!-- /include: navigation -->
         </nav>
 
         <section class="social">
@@ -159,17 +170,19 @@
                 <fieldset>
                     <legend>Sign up to receive our weekly e-news</legend>
 
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" />
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="E-mail address" />
 
-                    <input type="submit" name="submit" id="submit" value="Subscribe" />
+                    <input id="submit" name="submit" type="submit" value="Subscribe" />
                 </fieldset>
             </form>
         </section>
 
     </footer>
+    <!-- /include: footer -->
 
 
+<!-- include: page-bottom -->
     <!-- Scripts -->
     <script src="/static/js/main.min.js"></script>
 
@@ -184,3 +197,4 @@
 </body>
 
 </html>
+<!-- /include: page-bottom -->

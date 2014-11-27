@@ -72,8 +72,30 @@ blockquote {
     margin-right: 0;
     background: #FFF;
 
-    p {
+    > p {
+
+    }
+
+    > footer {
+        font-size: 0.9375em;
+        font-style: italic;
+        color: @mediumGray;
+    }
+}
+
+.main {
+    clear: both;
+    // overflow: auto;
+
+    p, li, dt, dd, th, td {
+        font-size: 0.9375em; // 15px
+        line-height: unit(22 / 15);
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    p, ul, ol, dl, table {
         margin-top: 0;
+        margin-bottom: unit(22 / 15, em);
     }
 }
 
@@ -142,16 +164,6 @@ nav a {
 //         text-transform: none;
 //     }
 // }
-
-.main {
-    clear: both;
-    // overflow: auto;
-
-    p, li, dt, dd, th, td {
-        font-size: 0.9375em; /* 15px */
-        line-height: unit(22 / 15);
-    }
-}
 
 
 /* Homepage layout
@@ -226,7 +238,7 @@ nav a {
     font-size: 2em;
     text-align: center;
 }*/
-.features h3 {
+.feature-slug {
     margin: 0;
     color: @mediumGray;
     // font-family: "Adelle Sans", "Helvetica Neue", Arial, sans-serif;
@@ -267,12 +279,12 @@ nav a {
     margin: 0 0 0.5em 0.5em;
     float: right;
 }
-.feature-secondary hgroup {
+.feature-secondary header {
     min-height: 85px;
     margin-bottom: 0.5em;
 }
-.feature-secondary h3 {
-    font-size: 0.725em;
+.feature-secondary .feature-slug {
+    font-size: 0.75em;
 }
 .feature-secondary h1 {
     margin: .15em 0 .2em;
@@ -325,14 +337,16 @@ nav a {
     margin-top: 0;
     font-size: 1.5em;
     font-weight: normal;
-    line-height: 1.25;
+    line-height: unit(22 / 24);
 }
 .content h2 {
     color: @mediumGray;
     font-size: 1.375em;
+    line-height: unit(22 / 22);
 }
 .content h3 {
     font-size: 1.125em;
+    line-height: unit(22 / 18);
     font-style: italic;
     font-weight: normal;
 }
@@ -403,7 +417,7 @@ body > footer {
 }
 #submit {
     .block('4col');
-    padding: 0.3125em 0.75em 0.375em;
+    padding: 0.3125em 0.25em 0.375em;
     border: none;
     border-radius: 4px;
     background: @mediumGray;

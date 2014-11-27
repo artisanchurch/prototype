@@ -158,7 +158,7 @@
         border: none;
         margin: 0;
         position: absolute;
-        top: 0.25em;
+        top: 5px;
         right: percentage(11 / 1200);
         text-align: left;
 
@@ -193,26 +193,30 @@
     }
     .home-kicker {
         .block('4col');
-        padding: 0.75em 0.9375em;
+        padding: 15px 0.9375em;
         padding-bottom: 1011px;
         border: none;
-        margin-bottom: -999px;
+        margin-bottom: -996px;
     }
     .home-mission {
-        font-size: 1.0625em;
+        font-size: 1.0625em; // 17px
+        line-height: unit(26 / 17);
         text-align: left;
     }
     .home-map {
         display: block;
-        // margin-left: 33.3%;
     }
     .home-services {
-        // margin-left: 66.6%;
-        h1 {
+        > h1,
+        > h2 {
             font-size: 1.125em;
+            line-height: unit(26 / 18);
         }
-        h2 {
-            font-size: 1.125em;
+
+        > h3 {
+            margin-top: 0;
+            font-size: 0.8125em; // 13px
+            line-height: unit(26 / 13);
         }
     }
 
@@ -232,15 +236,24 @@
         background: @navy;
         color: #FFF;
 
-        > a {
+        &-img {
             .block('8col');
         }
 
-        h3 {
+        .feature-slug {
             color: @gray;
         }
-        h1 {
-            color: lighten(@warmTan, 20%);
+        &-title {
+            &:link,
+            &:visited {
+                color: lighten(@warmTan, 20%);
+            }
+
+            &:hover,
+            &:focus {
+                color: @warmTan;
+                text-decoration: none;
+            }
         }
         p {
             color: lighten(@gray, 25%);
@@ -266,7 +279,7 @@
             float: none;
         }
 
-        hgroup {
+        header {
             min-height: 0;
         }
 
@@ -310,7 +323,7 @@
             .block('4col');
         }
         .fn.org {
-            line-height: unit(22 / 20);
+            line-height: unit(22 / 16);
         }
         .adr,
         .email {
@@ -366,17 +379,19 @@
     }
 
     .home-mission {
-        font-size: 1.3125em;
+        font-size: 1.3125em; // 21px
+        line-height: unit(32 / 21);
     }
     .home-services {
-        h1,
-        h2 {
+        > h1,
+        > h2 {
             font-size: 1.25em;
-            line-height: unit(30 / 20);
+            line-height: unit(32 / 20);
         }
-        h3 {
+
+        > h3 {
             font-size: 1em;
-            line-height: unit(24/ 16);
+            line-height: unit(32 / 16);
         }
     }
 
@@ -418,9 +433,19 @@
 
     .home-mission {
         font-size: 1.625em;
+        line-height: unit(38 / 26);
     }
     .home-services {
-        font-size: 1.25em;
+        > h1,
+        > h2 {
+            font-size: 1.5em;
+            line-height: unit(38 / 24);
+        }
+
+        > h3 {
+            font-size: 1.25em;
+            line-height: unit(38 / 20);
+        }
     }
 
     .feature-primary-copy {
