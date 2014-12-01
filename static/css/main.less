@@ -66,6 +66,12 @@ h1, h2, h3, h4, h5, h6,
     font-weight: bold;
 }
 
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, table, blockquote {
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
 blockquote {
     padding: 1em 1.5em;
     margin-left: 0;
@@ -80,6 +86,7 @@ blockquote {
         font-size: 0.9375em;
         font-style: italic;
         color: @mediumGray;
+        text-align: right;
     }
 }
 
@@ -90,12 +97,6 @@ blockquote {
     p, li, dt, dd, th, td {
         font-size: 0.9375em; // 15px
         line-height: unit(22 / 15);
-    }
-
-    h1, h2, h3, h4, h5, h6,
-    p, ul, ol, dl, table {
-        margin-top: 0;
-        margin-bottom: unit(22 / 15, em);
     }
 }
 
@@ -340,6 +341,7 @@ nav a {
     line-height: unit(22 / 24);
 }
 .content h2 {
+    margin-top: 44px;
     color: @mediumGray;
     font-size: 1.375em;
     line-height: unit(22 / 22);
@@ -417,12 +419,12 @@ body > footer {
 }
 #submit {
     .block('4col');
-    padding: 0.3125em 0.25em 0.375em;
+    padding: 0.4325em 0.25em 0.5em;
     border: none;
     border-radius: 4px;
     background: @mediumGray;
     color: #FFF;
-    font-size: 0.875em;
+    font-size: 0.8125em;
     transition: 0.125s all;
 
     &:hover,
