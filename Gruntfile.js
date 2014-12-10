@@ -72,7 +72,11 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       dist: {
-        src: ['static/js/vendor/jquery-1.9.1.js', 'static/js/vendor/holder.js', 'static/js/*.js', '!static/js/*.min.js'],
+        src: [
+          'static/js/vendor/jquery-1.11.1.js',
+          'static/js/vendor/holder.js',
+          'static/js/*.js',
+          '!static/js/*.min.js'],
         dest: 'static/js/main.min.js'
       }
     },

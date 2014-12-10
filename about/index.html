@@ -1,36 +1,41 @@
-<!-- include: page-top - TO DO: Figure out how to set title on each page. -->
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Artisan Church v3 Mockup - Normal page template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Artisan Church v3 Mockup - Homepage template</title>
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
     <!-- Typekit Embed Code -->
     <script type="text/javascript" src="//use.typekit.net/tki3phj.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <!-- Style -->
-    <link rel="stylesheet" href="../static/css/main.min.css" />
+    <link rel="stylesheet" href="static/css/main.min.css" />
 
     <!-- Script -->
-    <script src="../static/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="static/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    <a href="#main" class="skip">Skip to content</a>
 <!-- /include: page-top -->
 
-    <!-- include: header -->
-    <a href="#main" class="skip">Skip to content</a>
 
+    <!-- include: header -->
     <header>
 
         <section class="masthead">
@@ -137,7 +142,9 @@
             <h1 class="fn org">Artisan Church</h1>
             <div class="adr">
                 <div class="street-address">1235 South Clinton Avenue</div>
-                <span class="locality">Rochester</span>, <span class="region">New York</span> <span class="postal-code">14620</span>
+                <span class="locality">Rochester</span>,
+                <span class="region">New York</span>
+                <span class="postal-code">14620</span>
             </div>
             <a class="email" href="mailto:info@artisanchurch.com">info@artisanchurch.com</a>
         </section>
@@ -163,8 +170,16 @@
 
         <section class="social">
             <ul>
-                <li><a href="http://twitter.com/ArtisanChurch" title="Follow us on Twitter"><i class="icon-twitter-sign icon-2x"></i> Twitter</a></li>
-                <li><a href="http://www.facebook.com/ArtisanChurch" title="Like us on Facebook"><i class="icon-facebook-sign icon-2x"></i> Facebook</a></li>
+                <li>
+                    <a href="http://twitter.com/ArtisanChurch" title="Follow us on Twitter">
+                        <i class="icon-twitter-sign icon-2x"></i> Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.facebook.com/ArtisanChurch" title="Like us on Facebook">
+                        <i class="icon-facebook-sign icon-2x"></i> Facebook
+                    </a>
+                </li>
             </ul>
             <form name="enews-subscribe" class="enews-subscribe">
                 <fieldset>
@@ -188,10 +203,12 @@
 
     <!-- Google Analytics -->
     <script>
-        var _gaq=[['_setAccount','UA-3589505-1'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-3589505-1','auto');ga('send','pageview');
     </script>
 
 </body>

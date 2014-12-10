@@ -53,12 +53,19 @@ hr {
 }
 
 /*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img {
-    vertical-align: middle;
+* Remove the gap between audio, canvas, iframes,
+* images, videos and the bottom of their containers:
+* https://github.com/h5bp/html5-boilerplate/issues/440
+*/
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+vertical-align: middle;
 }
+
 
 /*
  * Remove default fieldset styles.
@@ -76,4 +83,15 @@ fieldset {
 
 textarea {
     resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #CCC;
+    color: #000;
+    padding: 0.2em 0;
 }
