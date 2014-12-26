@@ -73,10 +73,11 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'static/js/vendor/jquery-1.11.1.js',
+          'static/js/vendor/jquery-1.11.1.min.js',
           'static/js/vendor/holder.js',
           'static/js/*.js',
-          '!static/js/*.min.js'],
+          '!static/js/*.min.js'
+        ],
         dest: 'static/js/main.min.js'
       }
     },
@@ -114,7 +115,10 @@ module.exports = function(grunt) {
           Highcharts: true
         }
       },
-      all: ['static/js/<%= pkg.name %>.js']
+      all: [
+        'static/js/*.js',
+        '!static/js/*.min.js'
+      ]
     },
 
     /**
