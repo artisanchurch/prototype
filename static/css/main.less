@@ -90,6 +90,11 @@ blockquote {
     }
 }
 
+ul {
+    padding-left: 1.5em;
+    list-style: square;
+}
+
 dt {
     margin-top: 22px;
     font-weight: bold;
@@ -440,9 +445,12 @@ body > footer {
     list-style: none;
 }
 .social li {
-    margin: 0 1.25em 0 0;
     float: left;
-    // font-size: 0.8125em;
+    font-size: 0.9375em;
+
+    &:first-child {
+        margin-right: 1em;
+    }
 }
 .social a {
     text-decoration: none;
@@ -452,7 +460,7 @@ body > footer {
     line-height: 1;
     vertical-align: middle;
     position: relative;
-    top: -2px;
+    top: -1px;
 }
 .enews-subscribe {
     margin-right: -15px;
