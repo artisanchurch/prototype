@@ -239,10 +239,50 @@
         line-height: unit(26 / 15); // default p font-size is 15px
     }
     .home-map {
+        height: 142px; // .kicker-bg height + 15px margin + 1px border
         padding: 0;
         border-width: 0;
-        background: @gray;
+        overflow: hidden;
+        position: relative;
 
+        &:before {
+            content: ' ';
+            display: block;
+            height: 100%;
+            background: @gray url('https://maps.googleapis.com/maps/api/staticmap?center=43.140000,-77.592077&zoom=13&size=296x142&scale=2&maptype=roadmap&markers=color:red%7C43.13419,-77.592077') no-repeat center center;
+            background-size: cover;
+        }
+
+        &-text {
+            padding: 5px 10px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+            color: @primary;
+            font-family: "adelle", "Cambria", "Georgia", serif;
+            font-weight: bold;
+            text-shadow:  0px -1px 2px rgba(255, 255, 255, 1.0),
+                         -1px  0px 2px rgba(255, 255, 255, 1.0),
+                          1px  0px 2px rgba(255, 255, 255, 1.0),
+                          0px  1px 2px rgba(255, 255, 255, 1.0);
+            // text-align: right;
+
+            // frosted glass effect
+            // background-color: #FFF;
+        }
+
+        &:hover:before {
+            background-position: center bottom;
+            transform: scale(1.25);
+            transition: 0.15s all;
+        }
+        &:hover .home-map-text {
+            background: fade(@warmTan, 40%);
+            transition: 0.15s all;
+        }
+
+        // override bottom border
         &:after {
             content: none;
         }
@@ -421,6 +461,18 @@
         font-size: 1.25em;
         line-height: unit(30 / 20);
     }
+    .home-map {
+        height: 158px; // .kicker-bg height + 15px margin + 1px border
+
+        &:before {
+            background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=43.138000,-77.592077&zoom=14&size=368x158&scale=2&maptype=roadmap&markers=color:red%7C43.13419,-77.592077');
+        }
+
+        &-text {
+            top: 25px;
+            right: 10px;
+        }
+    }
     .home-services h3 {
         margin: 10px 11px 0;
         font-size: 1em;
@@ -515,9 +567,6 @@
     .kicker-bg {
         height: 166px;
     }
-    .home-map {
-        height: 182px; // .kicker-bg height + 15px margin + 1px border
-    }
     .home-kicker .kicker-head {
         font-size: 1.5em;
         line-height: unit(36 / 24);
@@ -525,6 +574,18 @@
     .home-mission p {
         font-size: 1.5em;
         line-height: unit(36 / 24);
+    }
+    .home-map {
+        height: 182px; // .kicker-bg height + 15px margin + 1px border
+
+        &:before {
+            background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=43.138000,-77.588000&zoom=14&size=368x182&scale=2&maptype=roadmap&markers=color:red%7C43.13419,-77.592077');
+        }
+
+        &-text {
+            top: 30px;
+            right: 15px;
+        }
     }
     .home-services h3 {
         font-size: 1.25em;
