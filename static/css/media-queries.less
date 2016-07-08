@@ -7,6 +7,10 @@
 
     // Styles for custom drop-down menu on narrow viewports
 
+    .header > .wrapper {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
     .menu-button {
         display: block;
         width: 76px;
@@ -17,8 +21,8 @@
         margin: 0;
 
         position: absolute;
-        top: 12px;
-        right: 0;
+        top: 3px;
+        right: 10px;
 
         background: @primaryAlt;
         color: lighten(@warmTan, 40%);
@@ -31,7 +35,7 @@
 
         &:hover,
         &:focus {
-            background: @primary;
+            // background: @primary;
             color: #FFF;
         }
     }
@@ -39,7 +43,7 @@
     .footer-nav {
         max-height: 0;
         padding: 0 0.75em;
-        margin: 0 -10px;
+        margin: 0 -15px;
 
         position: relative;
         clear: both;
@@ -97,27 +101,38 @@
     //.menu-button:active + .header-nav,
     .header-nav.is-active {
         max-height: 20em;
-        margin: 0.5em -10px 1em;
+        margin: 0.5em -15px 0;
     }
 
 }
 
 @media only screen and (min-width: 480px) {
-
+    .podcast-art {
+        width: 175px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
 
     // Header
 
-    .logo {
-        width: 300px;
-        margin: 1.5em 15px 1.5em 0;
-        float: left;
+    .header {
+        max-height: 118px;
     }
 
-    nav {
+    .header > .wrapper {
+        display: table;
+        width: 100%;
+        height: 118px;
+        padding-top: 10px;
+    }
 
+    .logo {
+        display: table-cell;
+        width: 300px;
+        height: 100%;
+        text-align: left;
+        vertical-align: middle;
     }
 
     .menu-button {
@@ -125,12 +140,15 @@
     }
 
     .header-nav {
-        margin-top: 2.625em;
+        display: table-cell;
+        position: relative;
+        text-align: right;
+        vertical-align: middle;
     }
 
     .header-nav > .nav-primary {
-        float: right;
         position: relative;
+        top: 0.125em; // adjustment for aligning baseline with logo
         right: -0.5em;
         font-size: 1.125em;
         line-height: 1;
@@ -139,15 +157,22 @@
             display: inline-block;
             margin-left: -0.25em;
         }
+        > li > a:link,
+        > li > a:visited {
+            color: rgba(255, 255, 255, 0.85);
+        }
         > li > a:hover,
         > li > a:focus {
-            background: fade(@warmTan, 20%);
-            color: @primaryAlt;
+            background: fade(#FFF, 10%);
+            color: #FFF;
             text-decoration: none;
+        }
+        > li > a:active {
+            color: #FFF;
         }
         > li.current > a {
             border-bottom: 2px solid fade(@warmTan, 50%);
-            color: @primaryAlt;
+            color: #FFF;
         }
     }
 
@@ -156,7 +181,7 @@
         border: none;
         margin: 0;
         position: absolute;
-        top: 5px;
+        top: 0;
         right: 0;
         text-align: left;
 
@@ -173,37 +198,18 @@
 
             &:link,
             &:visited {
-                color: @mediumGray;
+                color: #ECE7DD;
             }
             &:hover,
+            &:focus,
             &:active {
-                color: @navy;
+                color: #FFF;
             }
         }
 
         > li.current > a {
-            color: @navy;
+            color: @darkGray;
             text-decoration: underline;
-        }
-    }
-
-
-    // Logo overhang
-
-    .main,
-    body > footer {
-        padding-left: 71px;
-    }
-
-    .home-kickers,
-    body > footer {
-        border-top: none;
-
-        &:before {
-            content: '';
-            display: block;
-            border-top: 1px solid @gray;
-            margin: 0 15px 15px;
         }
     }
 
@@ -211,86 +217,59 @@
     // Homepage
 
     .home-kickers {
+        margin-top: 15px;
         margin-right: -(@grid_gutter-width / 2);
         margin-left: -(@grid_gutter-width / 2);
         overflow: hidden;
     }
+
     .home-kicker {
-        .grid_column(4);
+        // .grid_column(4);
         border-top-width: 0;
         margin-bottom: 0;
+    }
 
-        &:after {
-            content: '';
-            display: block;
-            border-bottom: 1px solid @gray;
-        }
-    }
     .kicker-bg {
+        display: table-cell;
+        width: inherit;
         height: 126px;
-        padding: 11px;
-        margin-bottom: 15px;
+        padding: 15px;
+        vertical-align: middle;
     }
+
     .home-kicker .kicker-head { // extra-specific to override original `.home-services h2`
         font-size: 1.0625em;
         line-height: unit(26 / 17);
     }
-    .home-mission p {
-        line-height: unit(26 / 15); // default p font-size is 15px
-    }
-    .home-map {
-        height: 142px; // .kicker-bg height + 15px margin + 1px border
-        padding: 0;
-        border-width: 0;
-        overflow: hidden;
+
+    .home-mission {
+        .grid_column(8);
         position: relative;
+        text-align: left;
 
-        &:before {
-            content: ' ';
-            display: block;
-            height: 100%;
-            background: @gray url('https://maps.googleapis.com/maps/api/staticmap?center=43.140000,-77.592077&zoom=13&size=296x142&scale=2&maptype=roadmap&markers=color:red%7C43.13419,-77.592077') no-repeat center center;
-            background-size: cover;
+        p {
+            line-height: unit(26 / 15); // default p font-size is 15px
         }
 
-        &-text {
-            padding: 5px 10px;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-
-            color: @primary;
-            font-family: "adelle", "Cambria", "Georgia", serif;
-            font-weight: bold;
-            text-shadow:  0px -1px 2px rgba(255, 255, 255, 1.0),
-                         -1px  0px 2px rgba(255, 255, 255, 1.0),
-                          1px  0px 2px rgba(255, 255, 255, 1.0),
-                          0px  1px 2px rgba(255, 255, 255, 1.0);
-            // text-align: right;
-
-            // frosted glass effect
-            // background-color: #FFF;
-        }
-
-        &:hover:before {
-            background-position: center bottom;
-            transform: scale(1.25);
-            transition: 0.15s all;
-        }
-        &:hover .home-map-text {
-            background: fade(@warmTan, 40%);
-            transition: 0.15s all;
-        }
-
-        // override bottom border
         &:after {
-            content: none;
+            content: '';
+            display: block;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            right: -15px;
+            border-right: 1px solid @gray;
         }
     }
-    .home-services  h3 {
-        margin-top: 8px;
-        font-size: 0.8125em; // 13px
-        line-height: unit(22 / 13);
+
+    .home-services {
+        .grid_column(4);
+
+        h3 {
+            margin-top: 8px;
+            font-size: 0.8125em; // 13px
+            line-height: unit(22 / 13);
+        }
     }
 
     .features {
@@ -300,9 +279,9 @@
     .feature-primary {
         padding: 15px;
         .clearfix();
-        margin-bottom: 15px;
+        margin-bottom: 30px;
 
-        background: @navy;
+        background: #414141 url('../img/featured-content_bg.png');
         color: #FFF;
 
         img {
@@ -312,7 +291,8 @@
         .feature-slug {
             color: @gray;
         }
-        &-title {
+
+        a {
             &:link,
             &:visited {
                 color: lighten(@warmTan, 20%);
@@ -323,15 +303,19 @@
                 color: @warmTan;
                 text-decoration: none;
             }
+
+            &:active {
+                color: @gray;
+            }
         }
         p {
-            color: lighten(@gray, 25%);
+            color: lighten(@gray, 10%);
         }
 
-        p a,
-        .read-more {
-            color: @warmTan;
-        }
+        // p a,
+        // .read-more {
+        //     color: lighten(@warmTan, 20%);
+        // }
     }
 
     .features-secondary {
@@ -343,13 +327,6 @@
         padding-top: 0;
         margin-top: 0;
         margin-bottom: 0;
-
-        &:before {
-            content: '';
-            display: block;
-            border-top: 1px solid @gray;
-            margin-bottom: 15px;
-        }
 
         img {
             width: auto;
@@ -371,7 +348,7 @@
     // Normal page
 
     .main.inside {
-        padding-top: 0;
+        padding-top: 40px;
         border-top: none;
         margin-right: -(@grid_gutter-width / 2);
         margin-left: -(@grid_gutter-width / 2);
@@ -379,6 +356,14 @@
     .sidebar {
         .grid_column(4);
         .grid_pull(8);
+
+        &-content:first-child {
+            margin-top: 0;
+        }
+
+        .full-width & {
+            display: none;
+        }
     }
     .nav-inside a {
         padding: 0.75em;
@@ -388,14 +373,30 @@
     .content {
         .grid_column(8);
         .grid_push(4);
+
+        .full-width & {
+            .grid_column(12);
+            .grid_push(0);
+        }
+    }
+
+    .contact-general {
+        width: 50%;
+        float: right;
+    }
+
+    .connection-group-img {
+        width: 50%;
+        float: right;
+        clear: right;
+        margin: 0 0 11px 1em;
     }
 
 
     // Footer
 
-    body > footer {
-        padding-top: 0;
-        margin: 30px -(@grid_gutter-width / 2) 11px;
+    .footer > .wrapper > .footer-items {
+        margin: 0 -15px;
 
         > .vcard {
             .grid_column(4);
@@ -457,6 +458,13 @@
         font-size: 1em;
     }
 
+    // .main {
+    //     p, li, dd, td {
+    //         font-size: 16px; // Back up to 16px
+    //         line-height: unit(24 / 16);
+    //     }
+    // }
+
     .kicker-bg {
         height: 142px;
     }
@@ -467,18 +475,6 @@
     .home-mission p {
         font-size: 1.25em;
         line-height: unit(30 / 20);
-    }
-    .home-map {
-        height: 158px; // .kicker-bg height + 15px margin + 1px border
-
-        &:before {
-            background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=43.138000,-77.592077&zoom=14&size=368x158&scale=2&maptype=roadmap&markers=color:red%7C43.13419,-77.592077');
-        }
-
-        &-text {
-            top: 25px;
-            right: 10px;
-        }
     }
     .home-services h3 {
         margin: 10px 11px 0;
@@ -501,7 +497,7 @@
             &-bg {
                 padding: 15px 1px 515px 15px;
                 margin-bottom: -500px;
-                background: @navy;
+                background: #414141 url('../img/featured-content_bg.png');
             }
         }
 
@@ -513,7 +509,7 @@
             &-bg {
                 padding: 15px 15px 515px;
                 margin-bottom: -500px;
-                background: @navy;
+                background: #414141 url('../img/featured-content_bg.png');
             }
         }
     }
@@ -529,7 +525,14 @@
         font-size: 0.8125em;
     }
     .social li {
-        margin-right: 2em;
+        font-size: 0.875em;
+
+    }
+
+    .podcast-art {
+        width: 280px;
+        margin: 0 0 11px 1em;
+        float: right;
     }
 }
 
@@ -547,19 +550,9 @@
     .sidebar {
         .grid_column(@columns: 3, @suffix: 1);
     }
-
-    // Logo overhang
-    .main,
-    body > footer {
-        padding-left: 95px;
-    }
 }
 
 @media only screen and (min-width: 1200px) {
-    .wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
 
     .header-nav {
         margin-top: 3em;
@@ -576,8 +569,8 @@
         line-height: unit(36 / 24);
     }
     .home-mission p {
-        font-size: 1.5em;
-        line-height: unit(36 / 24);
+        font-size: 2.125em;
+        line-height: 1.5;
     }
     .home-map {
         height: 182px; // .kicker-bg height + 15px margin + 1px border
@@ -607,8 +600,12 @@
         padding: 0.75em 1em;
     }
 
-    footer {
+    .podcast-art {
+        width: 350px;
+    }
 
+    .social li {
+        font-size: 0.9375em;
     }
 }
 

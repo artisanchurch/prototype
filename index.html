@@ -28,223 +28,198 @@
 
     <a href="#main" class="skip">Skip to content</a>
 
-    <header>
+    <header class="header">
+        <div class="wrapper">
+            <a class="logo" href="/">
+                <img src="/static/img/logo_v3.png" alt="Artisan Church">
+            </a>
 
-        <a class="logo" href="/">
-            <img class="logo-svg"
-                 src="static/img/logo.svg"
-                 onerror="this.onerror=null;this.src='static/img/logo_h_300x61_transparent.png';"
-                 alt="Artisan Church">
-            <noscript>
-                <img class="logo-png"
-                     src="static/img/logo_h_300x61_transparent.png"
-                     alt="Artisan Church"
-                     width="300"
-                     height="61">
-            </noscript>
-        </a>
+            <button class="menu-button" id="menu-button"><i class="icon-reorder"></i> Menu</button>
 
-        <button class="menu-button" id="menu-button"><i class="icon-reorder"></i> Menu</button>
+            <nav class="header-nav" id="header-nav" role="navigation">
+                <ul class="nav-primary">
+                    <li class="p1"><a href="/about/">About Us</a></li>
+                    <li class="p2"><a href="/worship/">Worship</a></li>
+                    <li class="p4"><a href="/children/">Children</a></li>
+                    <li class="p3"><a href="/groups/">Groups</a></li>
+                    <li class="p5"><a href="/events/">Events</a></li>
+                </ul>
 
-        <nav class="header-nav" id="header-nav" role="navigation">
-            <ul class="nav-primary">
-                <li class="p1"><a href="about/">About Us</a></li>
-                <li class="p2"><a href="worship/">Worship</a></li>
-                <li class="p4"><a href="children/">Children</a></li>
-                <li class="p3"><a href="groups/">Groups</a></li>
-                <li class="p5"><a href="events/">Events</a></li>
-            </ul>
-
-            <ul class="nav-secondary">
-                <li class="s1"><a href="directions/">Directions</a></li>
-                <li class="s2"><a href="podcast/">Podcast</a></li>
-                <li class="s3"><a href="giving/">Giving</a></li>
-                <li class="s4"><a href="contact/">Contact</a></li>
-            </ul>
-        </nav>
-
+                <ul class="nav-secondary">
+                    <li class="s1"><a href="/directions/">Directions</a></li>
+                    <li class="s2"><a href="/podcast/">Podcast</a></li>
+                    <li class="s3"><a href="/giving/">Giving</a></li>
+                    <li class="s4"><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="main" id="main" role="main">
-
-        <section class="home-kickers">
-
-            <a class="home-kicker home-mission" href="about/">
-                <div class="kicker-bg">
-                    <h1 class="kicker-head">Our Mission</h1>
-                    <p>Encounter God, embrace people, engage culture&mdash;in the way of Jesus.</p>
-                </div>
-            </a>
-
-            <a class="home-kicker home-map" href="directions/">
-                <div class="home-map-text kicker-head">Directions</div>
-            </a>
-
-            <a class="home-kicker home-services" href="worship/">
-                <div class="kicker-bg">
-                    <h1 class="kicker-head">Sunday Worship</h1>
-                    <h2 class="kicker-head">10:00&ndash;11:30 am</h2>
-                    <h3>Followed by coffee &amp; conversation</h3>
-                </div>
-            </a>
-
-        </section>
-
-        <section class="features">
-
-            <section class="feature-primary">
-                <a class="feature-primary-img" href="/worship/messages/series-name/">
-                    <div class="feature-primary-img-bg">
-                        <!-- big feature image (16x9) -->
-                        <img src="http://www.artisanchurch.com/ee/images/site_images/series/FamilyofAbraham_web.jpg"
-                             alt=""> <!-- Alt tag intentionally left blank -->
+        <div class="wrapper">
+            <section class="home-kickers">
+                <a class="home-kicker home-mission" href="about/">
+                    <div class="kicker-bg">
+                        <h1 class="kicker-head">Our Mission</h1>
+                        <p>Encounter God, embrace people, engage culture—in the way of Jesus.</p>
                     </div>
                 </a>
-                <section class="feature-primary-copy">
-                    <div class="feature-primary-copy-bg">
-                        <header>
-                            <h3 class="feature-slug">Current Series</h3>
-                            <a class="feature-primary-title" href="/worship/messages/series-name/">
-                                <h1>Family of Abraham</h1>
-                            </a>
-                            <h2>Blessed to be a blessing</h2>
-                        </header>
-                        <p>Abraham was called by God to be the father of a “great nation” that would be the source of blessing for all the families of the earth. In the story of Abraham and his descendants, we find a great foundation for our own participation in the unfolding Story of God.</p>
-                        <a class="read-more" href="/worship/messages/series-name">
-                            series details <i class="icon-angle-right"></i>
-                        </a>
+
+                <a class="home-kicker home-services" href="worship/">
+                    <div class="kicker-bg">
+                        <h1 class="kicker-head">Sunday Worship</h1>
+                        <h2 class="kicker-head">8:45 & 11:00 <span class="ampm">am</span></h2>
                     </div>
-                </section>
-            </section>
+                </a>
+            </section> <!-- /.home-kickers -->
 
-            <div class="features-secondary">
-
-                <section class="feature-secondary">
-                    <a href="#">
-                        <!-- <img src="http://dummyimage.com/280x158/CCC/222&amp;text=small+feature" alt="small feature" width="280" /> -->
-                        <img data-src="holder.js/400x225/auto" />
-                        <!-- small feature image -->
+            <section class="features">
+                <section class="feature-primary">
+                    <a class="feature-primary-img" href="/worship/messages/series-name/">
+                        <div class="feature-primary-img-bg">
+                            <!-- big feature image (16x9) -->
+                            <img src="http://www.artisanchurch.com/ee/images/site_images/series/FamilyofAbraham_web.jpg"
+                                 alt=""> <!-- Alt tag intentionally left blank -->
+                        </div>
                     </a>
-                    <section class="feature-secondary-copy">
-                        <header>
-                            <h3 class="feature-slug">Special Event</h3>
-                            <a class="feature-secondary-title" href="/worship/events/event-name/">
-                                <h1>Event Title</h1>
+                    <section class="feature-primary-copy">
+                        <div class="feature-primary-copy-bg">
+                            <header>
+                                <h3 class="feature-slug">Current Series</h3>
+                                <a class="feature-primary-title" href="/worship/messages/series-name/">
+                                    <h1>Family of Abraham</h1>
+                                </a>
+                                <h2>Blessed to be a blessing</h2>
+                            </header>
+                            <p>Abraham was called by God to be the father of a “great nation” that would be the source of blessing for all the families of the earth. In the story of Abraham and his descendants, we find a great foundation for our own participation in the unfolding Story of God.</p>
+                            <a class="read-more" href="/worship/messages/series-name">
+                                series details <i class="icon-angle-right"></i>
                             </a>
-                            <h2>Secondary heading text</h2>
-                        </header>
-                        <p>This is the shorter description of this item. This is the shorter description of this item. <a href="#">learn more&nbsp;<i class="icon-angle-right"></i></a></p>
+                        </div>
                     </section>
-                </section>
+                </section> <!-- /.feature-primary -->
 
-                <section class="feature-secondary">
-                    <a href="#">
-                        <!-- <img src="http://dummyimage.com/280x158/CCC/222&amp;text=small+feature" alt="small feature" width="280" /> -->
-                        <img data-src="holder.js/400x225/auto" />
-                        <!-- small feature image -->
-                    </a>
-                    <section class="feature-secondary-copy">
-                        <header>
-                            <h3 class="feature-slug">Upcoming Series</h3>
-                            <a class="feature-secondary-title" href="/worship/messages/series-name/">
-                                <h1>Big, Long Series Title</h1>
-                            </a>
-                            <h2>Probably even longer series subtitle</h2>
-                        </header>
-                        <p>This is the shorter description of this item. This is the shorter description of this item. <a href="#">learn more&nbsp;<i class="icon-angle-right"></i></a></p>
+                <div class="features-secondary">
+                    <section class="feature-secondary">
+                        <h3 class="feature-slug">Special Event</h3>
+                        <a href="#">
+                            <!-- <img src="http://dummyimage.com/280x158/CCC/222&amp;text=small+feature" alt="small feature" width="280" /> -->
+                            <img data-src="holder.js/400x225/auto" />
+                            <!-- small feature image -->
+                        </a>
+                        <section class="feature-secondary-copy">
+                            <header>
+                                <a class="feature-secondary-title" href="/worship/events/event-name/">
+                                    <h1>Event Title</h1>
+                                </a>
+                                <h2>Secondary heading text</h2>
+                            </header>
+                            <p>This is the shorter description of this item. This is the shorter description of this item. <a href="#">learn more&nbsp;<i class="icon-angle-right"></i></a></p>
+                        </section>
                     </section>
-                </section>
 
-                <section class="feature-secondary">
-                    <a href="#">
-                        <!-- <img src="http://dummyimage.com/280x158/CCC/222&amp;text=small+feature" alt="small feature" width="280" /> -->
-                        <img data-src="holder.js/400x225/auto" />
-                        <!-- small feature image -->
-                    </a>
-                    <section class="feature-secondary-copy">
-                        <header>
-                            <h3 class="feature-slug">Miss a Week?</h3>
-                            <a class="feature-secondary-title" href="/podcast/">
-                                <h1>Download Our Podcast</h1>
-                            </a>
-                            <h2>Sermon Audio</h2>
-                        </header>
-                        <p>This is the shorter description of this item. This is the shorter description of this item. <a href="/podcast">learn more&nbsp;<i class="icon-angle-right"></i></a></p>
+                    <section class="feature-secondary">
+                        <h3 class="feature-slug">Upcoming Series</h3>
+                        <a href="#">
+                            <!-- <img src="http://dummyimage.com/280x158/CCC/222&amp;text=small+feature" alt="small feature" width="280" /> -->
+                            <img data-src="holder.js/400x225/auto" />
+                            <!-- small feature image -->
+                        </a>
+                        <section class="feature-secondary-copy">
+                            <header>
+                                <a class="feature-secondary-title" href="/worship/messages/series-name/">
+                                    <h1>Big, Long Series Title</h1>
+                                </a>
+                                <h2>Probably even longer series subtitle</h2>
+                            </header>
+                            <p>This is the shorter description of this item. This is the shorter description of this item. <a href="#">learn more&nbsp;<i class="icon-angle-right"></i></a></p>
+                        </section>
                     </section>
-                </section>
 
-            </div>
-
-        </section>
-
+                    <section class="feature-secondary">
+                        <h3 class="feature-slug">Miss a Week?</h3>
+                        <a href="#">
+                            <!-- <img src="http://dummyimage.com/280x158/CCC/222&amp;text=small+feature" alt="small feature" width="280" /> -->
+                            <img data-src="holder.js/400x225/auto" />
+                            <!-- small feature image -->
+                        </a>
+                        <section class="feature-secondary-copy">
+                            <header>
+                                <a class="feature-secondary-title" href="/podcast/">
+                                    <h1>Download our podcast</h1>
+                                </a>
+                                <h2>Sermon audio</h2>
+                            </header>
+                            <p>This is the shorter description of this item. This is the shorter description of this item. <a href="/podcast">learn more&nbsp;<i class="icon-angle-right"></i></a></p>
+                        </section>
+                    </section>
+                </div> <!-- /.features-secondary -->
+            </section> <!-- /.features -->
+        </div> <!-- /.wrapper -->
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-items">
+                <section class="vcard">
+                    <h1 class="fn org">Artisan Church</h1>
+                    <div class="adr">
+                        <div class="street-address">1235 South Clinton Avenue</div>
+                        <span class="locality">Rochester</span>,
+                        <span class="region">New York</span>
+                        <span class="postal-code">14620</span>
+                    </div>
+                    <a class="email" href="mailto:info@artisanchurch.com">info@artisanchurch.com</a>
+                </section>
 
-        <section class="vcard">
-            <h1 class="fn org">Artisan Church</h1>
-            <div class="adr">
-                <div class="street-address">1235 South Clinton Avenue</div>
-                <span class="locality">Rochester</span>,
-                <span class="region">New York</span>
-                <span class="postal-code">14620</span>
+                <nav class="footer-nav" id="footer-nav" role="navigation">
+                    <ul class="nav-primary">
+                        <li class="p1"><a href="about/">About Us</a></li>
+                        <li class="p2"><a href="worship/">Worship</a></li>
+                        <li class="p4"><a href="children/">Children</a></li>
+                        <li class="p3"><a href="groups/">Groups</a></li>
+                        <li class="p5"><a href="events/">Events</a></li>
+                    </ul>
+
+                    <ul class="nav-secondary">
+                        <li class="s1"><a href="directions/">Directions</a></li>
+                        <li class="s2"><a href="podcast/">Podcast</a></li>
+                        <li class="s3"><a href="giving/">Giving</a></li>
+                        <li class="s4"><a href="contact/">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <section class="social">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/ArtisanChurch" title="Follow us on Twitter">
+                                <i class="icon-twitter-sign icon-2x"></i> Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/ArtisanChurch" title="Like us on Facebook">
+                                <i class="icon-facebook-sign icon-2x"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/artisanchurch/" title="See us on Instagram">
+                                <i class="icon-instagram icon-2x"></i> Instagram
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a class="enews-subscribe" href="https://artisanchurch.ccbchurch.com/form_response.php?id=5">
+                        Subscribe to our weekly e-mail news
+                        <i class="icon-external-link-sign"></i>
+                    </a>
+                </section>
             </div>
-            <a class="email" href="mailto:info@artisanchurch.com">info@artisanchurch.com</a>
-        </section>
-
-        <nav class="footer-nav" id="footer-nav" role="navigation">
-            <ul class="nav-primary">
-                <li class="p1"><a href="about/">About Us</a></li>
-                <li class="p2"><a href="worship/">Worship</a></li>
-                <li class="p4"><a href="children/">Children</a></li>
-                <li class="p3"><a href="groups/">Groups</a></li>
-                <li class="p5"><a href="events/">Events</a></li>
-            </ul>
-
-            <ul class="nav-secondary">
-                <li class="s1"><a href="directions/">Directions</a></li>
-                <li class="s2"><a href="podcast/">Podcast</a></li>
-                <li class="s3"><a href="giving/">Giving</a></li>
-                <li class="s4"><a href="contact/">Contact</a></li>
-            </ul>
-        </nav>
-
-        <section class="social">
-            <ul>
-                <li>
-                    <a href="http://twitter.com/ArtisanChurch" title="Follow us on Twitter">
-                        <i class="icon-twitter-sign icon-2x"></i> Twitter
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.facebook.com/ArtisanChurch" title="Like us on Facebook">
-                        <i class="icon-facebook-sign icon-2x"></i> Facebook
-                    </a>
-                </li>
-            </ul>
-            <form name="enews-subscribe" class="enews-subscribe">
-                <fieldset>
-                    <div class="enews-legend">
-                        <legend>Subscribe to our weekly email newsletter</legend>
-                    </div>
-
-                    <div class="enews-input">
-                        <label for="email">E-mail</label>
-                        <input id="email" name="email" type="email" placeholder="E-mail address">
-                    </div>
-
-                    <div class="enews-submit">
-                        <input id="submit" name="submit" type="submit" value="Sign up">
-                    </div>
-                </fieldset>
-            </form>
-        </section>
-
+        </div>
     </footer>
 
 
     <!-- Scripts -->
-    <script src="static/js/main.min.js"></script>
+    <script src="/static/js/main.min.js"></script>
 
     <!-- Google Analytics -->
     <script>
