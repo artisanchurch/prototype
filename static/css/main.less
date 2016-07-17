@@ -348,7 +348,7 @@ nav a {
 }
 
 .section-id {
-    color: @warmTan;
+    color: @mediumGray;
     font-size: 1.25em;
     line-height: unit(22 / 20);
     text-transform: uppercase;
@@ -359,7 +359,7 @@ nav a {
 .nav-inside a {
     padding: 0.5em 1em;
     margin-bottom: 1px;
-    background: fade(@warmTan, 20%);
+    background: fade(@warmTan, 50%);
     font-size: 1.125em;
     line-height: 1;
     text-align: center;
@@ -367,12 +367,14 @@ nav a {
 .nav-inside a:hover,
 .nav-inside a:focus,
 .nav-inside .current a {
-    background: fade(@warmTan, 40%);
+    background: @warmTan;
+    color: @primaryAlt;
     text-decoration: none;
 }
 .nav-inside a:active {
-    background: @warmTan;
-    color: @lightTan;
+    background: @mediumGray;
+    color: #ECE7DD;
+    transition-duration: initial;
 }
 .sidebar-content {
     margin-top: 44px;
@@ -549,14 +551,14 @@ dd.message-title {
     padding: 1.25em 0 1em;
     margin-top: 60px;
     clear: both;
-    background: #CBC4AA;
+    background: @warmTan;
 
     a:hover,
     a:focus {
         color: @primaryAlt;
     }
     a:active {
-        color: @darkGray
+        color: @darkGray;
     }
 }
 .fn.org {
