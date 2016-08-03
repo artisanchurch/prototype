@@ -11,13 +11,10 @@
         padding-right: 10px;
         padding-left: 10px;
     }
+
     .menu-button {
-        display: block;
-        width: 76px;
-        height: 2em;
-        padding: 0.3125em 0.5em 0.375em;
-        border-radius: 4px;
-        border-width: 0;
+        .btn();
+        padding: 0.5em 0.625em;
         margin: 0;
 
         position: absolute;
@@ -25,20 +22,13 @@
         right: 10px;
 
         background: @primaryAlt;
-        color: lighten(@warmTan, 40%);
-        font-size: 1em;
-        font-weight: normal;
-        text-align: center;
-
-        cursor: pointer;
-        transition: 0.25s all;
 
         &:hover,
         &:focus {
-            // background: @primary;
-            color: #FFF;
+            background: @primary;
         }
     }
+
     .header-nav,
     .footer-nav {
         max-height: 0;
@@ -55,18 +45,13 @@
         font-size: 1em;
         line-height: 1;
 
-        -webkit-transition: all 0.3s ease-out;
-           -moz-transition: all 0.3s ease-out;
-                transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
     .footer-nav {
         max-height: none;
         margin-top: 1.25em;
         margin-bottom: 1.25em;
     }
-    // .nav-primary > li {
-    //     padding-right: 3em;
-    // }
     .header-nav ul,
     .footer-nav ul {
         width: 50%;
@@ -86,7 +71,7 @@
         &:focus {
             background: @primary;
             color: #FFF;
-            transition: 0.25s all;
+            transition: 0.15s all;
         }
     }
 
@@ -104,11 +89,31 @@
         margin: 0.5em -15px 0;
     }
 
+    .feature-secondary img {
+        width: 50%;
+        margin-top: -1em;
+        margin-left: 0.5em;
+        float: right;
+    }
+
+    .sidebar {
+        margin-top: 65px;
+        border-top: 1px solid #ACACAC;
+        padding: 22px 22px 0;
+    }
+
+    .connection-group-img + h2.connection-group-title {
+        margin-top: 22px;
+    }
 }
 
 @media only screen and (min-width: 480px) {
     .podcast-art {
         width: 175px;
+    }
+
+    .staff-photo {
+        margin-left: 2em;
     }
 }
 
@@ -206,6 +211,7 @@
             &:focus,
             &:active {
                 color: #FFF;
+                text-decoration: underline;
             }
         }
 
@@ -219,8 +225,9 @@
     // Homepage
 
     .home-kickers {
-        margin-top: 15px;
+        margin-top: 22px;
         margin-right: -(@grid_gutter-width / 2);
+        margin-bottom: 22px;
         margin-left: -(@grid_gutter-width / 2);
         overflow: hidden;
     }
@@ -297,13 +304,12 @@
         a {
             &:link,
             &:visited {
-                color: lighten(@warmTan, 20%);
+                color: @warmTan;
             }
 
             &:hover,
             &:focus {
-                color: @warmTan;
-                text-decoration: none;
+                color: lighten(@warmTan, 20%);
             }
 
             &:active {
@@ -312,6 +318,7 @@
         }
         p {
             color: lighten(@gray, 10%);
+            letter-spacing: 0.375px;
         }
 
         // p a,
@@ -324,11 +331,16 @@
         .clearfix();
         margin: 0 -(@grid_gutter-width / 2);
     }
+
     .feature-secondary {
         .grid_column(4);
         padding-top: 0;
         margin-top: 0;
         margin-bottom: 0;
+
+        .feature-slug {
+            margin-bottom: 5.5px;
+        }
 
         img {
             width: auto;
@@ -383,16 +395,43 @@
         }
     }
 
-    .contact-general {
-        width: 50%;
+    .float-right {
+        margin: 0 0 11px @grid_gutter-width;
         float: right;
+    }
+
+    .main-contacts {
+        .grid_nested-col-group();
+        margin-top: 44px;
+    }
+    .contacts-staff {
+        .grid_column(1, 2);
+    }
+    .contacts-general {
+        .grid_column(1, 2);
+        padding: 0;
+        border: none;
+        margin-top: 0;
+
+        dl {
+            border-left: 1px solid @gray;
+            padding-left: unit(@grid_gutter-width / 16px, em);
+        }
+    }
+
+    .connection-group {
+        .clearfix();
     }
 
     .connection-group-img {
         width: 50%;
         float: right;
         clear: right;
-        margin: 0 0 11px 1em;
+        margin: 0 0 1em 1em;
+    }
+
+    .connection-group-img + h2.connection-group-title {
+        margin-top: 0;
     }
 
 
@@ -527,9 +566,8 @@
     .enews-subscribe label {
         font-size: 0.8125em;
     }
-    .social li {
+    .footer .social li {
         font-size: 0.875em;
-
     }
 
     .podcast-art {
@@ -606,7 +644,7 @@
         width: 350px;
     }
 
-    .social li {
+    .footer .social li {
         font-size: 0.9375em;
     }
 }
